@@ -1,12 +1,11 @@
 // Define address and data pins
-const int addressPins[] = {2, 3, 4, 5, 6, 7, 8, 9};
-const int dataPins[] = {10, 11, 12, 13, A0, A1, A2, A3};
-const int cePin = 18; // Chip Enable
-const int oePin = 19; // Output Enable
+const int addressPins[] = {2, 3, 4, 5, 6}; // A0 to A4
+const int dataPins[] = {8, 9, 10, 11, 12, 13, A0, A1}; // Q0 to Q7
+const int oePin = 7; // Output Enable
 
 void setup() {
   // Initialize address pins as outputs
-  for (int i = 0; i < 8; i++) {
+  for (int i = 0; i < 5; i++) {
     pinMode(addressPins[i], OUTPUT);
   }
 
@@ -15,26 +14,23 @@ void setup() {
     pinMode(dataPins[i], INPUT);
   }
 
-  // Initialize control pins
-  pinMode(cePin, OUTPUT);
+  // Initialize control pin
   pinMode(oePin, OUTPUT);
 
-  // Set control pins to default states
-  digitalWrite(cePin, HIGH); // Disable chip
+  // Set control pin to default state
   digitalWrite(oePin, HIGH); // Disable output
 
   Serial.begin(9600); // Start serial communication
 }
 
 void loop() {
-  // Enable chip and output
-  digitalWrite(cePin, LOW);
+  // Enable output
   digitalWrite(oePin, LOW);
 
-  // Loop through all addresses
-  for (unsigned int address = 0; address < 256; address++) {
+  // Loop through all addresses (32 addresses for 32x8 ROM)
+  for (unsigned int address = 0; address < 32; address++) {
     // Set address pins
-    for (int i = 0; i < 8; i++) {
+    for (int i = 0; i < 5; i++) {
       digitalWrite(addressPins[i], (address >> i) & 1);
     }
 
@@ -63,8 +59,7 @@ void loop() {
     Serial.println();
   }
 
-  // Disable chip and output
-  digitalWrite(cePin, HIGH);
+  // Disable output
   digitalWrite(oePin, HIGH);
 
   while (true); // Stop after one pass
