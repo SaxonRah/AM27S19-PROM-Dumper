@@ -1,8 +1,45 @@
 # PROM-Dumper
-Using an Arduino, dump a AM27S19DC 256Bit (32x8) Bipolar PROM from AMD. 
+Using an Arduino UNO, dump a AM27S19DC 256Bit (32x8) Bipolar PROM from AMD. 
 
-# Untested
-Wasn't compiled or tested yet. Will update the code and readme when I get a chance to compile and test.
+# Tested
+Was compiled and tested.
+
+### Tektronix 92A96XD (A29) 160-8341-01 PROM
+
+```
+:0100000001FE
+:0100010000FE
+:0100020009F4
+:0100030002FA
+:0100040000FB
+:010005008C6E
+:0100060000F9
+:0100070011E7
+:0100080042B5
+:0100090000F6
+:01000A0000F5
+:01000B0000F4
+:01000C0000F3
+:01000D0000F2
+:01000E0000F1
+:01000F0000F0
+:0100100000EF
+:0100110000EE
+:0100120000ED
+:0100130000EC
+:0100140000EB
+:0100150000EA
+:0100160000E9
+:0100170000E8
+:0100180000E7
+:0100190000E6
+:01001A0000E5
+:01001B0000E4
+:01001C0000E3
+:01001D0000E2
+:01001E0000E1
+:01001F0000E0
+```
 
 # Why?
 I need a dumper for some Textronix gear's PROMs and my Xgecu T56 doesn't support the AM27S19DC chip nor any of it's drop in replacements. 
