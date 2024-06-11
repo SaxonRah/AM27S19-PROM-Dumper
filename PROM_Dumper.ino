@@ -1,7 +1,22 @@
-// Define address and data pins
-const int addressPins[] = {2, 3, 4, 5, 6}; // A0 to A4
-const int dataPins[] = {8, 9, 10, 11, 12, 13, A0, A1}; // Q0 to Q7
-const int oePin = 7; // Output Enable
+// ROM VCC-> Ard 5V  - 5 Volts
+// ROM GND-> Ard GND - Ground
+// ROM A0 -> Ard 2   - Address
+// ROM A1 -> Ard 3   - Address
+// ROM A2 -> Ard 4   - Address
+// ROM A3 -> Ard 5   - Address
+// ROM A4 -> Ard 6   - Address
+const int addressPins[] = {2, 3, 4, 5, 6};
+// ROM G| -> Ard 7   - Output Enable
+const int oePin = 7;
+// ROM Q0 -> Ard 8   - Output
+// ROM Q1 -> Ard 9   - Output
+// ROM Q2 -> Ard 10  - Output
+// ROM Q3 -> Ard 11  - Output
+// ROM Q4 -> Ard 12  - Output
+// ROM Q5 -> Ard 13  - Output
+// ROM Q6 -> Ard A0  - Output
+// ROM Q7 -> Ard A1  - Output
+const int dataPins[] = {8, 9, 10, 11, 12, 13, A0, A1};
 
 void setup() {
   // Initialize address pins as outputs
