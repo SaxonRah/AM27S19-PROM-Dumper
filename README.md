@@ -1,6 +1,6 @@
-# PROM-Dumper
+# 256Bit (32x8) TTL/Bipolar PROM - Dumper
 Using an Arduino UNO, dump a 256Bit (32x8) TTL/Bipolar PROM.
-You can dump any similar PROMS like for example, a AM27S19 or a MB7112. 
+You can dump any similar PROMS like for example, a AM27S19 or a MB7112 have been tested. 
 
 I'd imagine all these would work:  
 | x                     	| NEC    	| Fujitsu        	| Intersil 	| Mitsubishi 	| OKI     	| Signetics                   	| MMI                     	| TI         	| Harris   	| AMD                                   	| National       	|
