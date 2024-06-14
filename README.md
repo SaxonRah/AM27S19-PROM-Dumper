@@ -144,6 +144,7 @@ If you know how to dump these chips with the Xgecu T56 raise an Issue please.
 :01001D0000E2 - Checksum Correct
 :01001E0000E1 - Checksum Correct
 :01001F0000E0 - Checksum Correct
+32 - Correct Number of Entries
 ```
 
 ### Tektronix 92SX118 (A25) 160-3851-01 PROM
@@ -216,4 +217,5 @@ If you know how to dump these chips with the Xgecu T56 raise an Issue please.
 :01001D0000E2 - Checksum Correct
 :01001E0000E1 - Checksum Correct
 :01001F0000E0 - Checksum Correct
+32 - Correct Number of Entries
 ```
