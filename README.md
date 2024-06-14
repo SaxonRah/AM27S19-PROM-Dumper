@@ -1,5 +1,27 @@
 # PROM-Dumper
-Using an Arduino UNO, dump a AM27S19DC 256Bit (32x8) Bipolar PROM from AMD.  
+Using an Arduino UNO, dump a 256Bit (32x8) TTL/Bipolar PROM.
+You can dump any similar PROMS like for example, a AM27S19 or a MB7112. 
+
+I'd imagine all these would work:  
+| x                     	| NEC    	| Fujitsu        	| Intersil 	| Mitsubishi 	| OKI     	| Signetics                   	| MMI                     	| TI         	| Harris   	| AMD                                   	| National       	|
+|-----------------------	|--------	|----------------	|----------	|------------	|---------	|-----------------------------	|-------------------------	|------------	|----------	|---------------------------------------	|----------------	|
+| Tri-State Output      	| uPB410 	| MB7051, MB7112 	| IM5610   	| M54730     	| MSL8215 	| 82S123(50ns), 82S123A(25ns) 	| 6331-1, 63S081, 63LS081 	| TBP18S030  	| HM7603-5 	| AM27S19, AM27S19AC, AM27S09, AM27LS09 	| 74S288, DM8577 	|
+| Open Collector Output 	| uPB400 	| MB7056, MB7111 	| IM5600   	|            	| MSL8216 	| 82S23(50ns), 82S23A(25ns)   	| 6330-1, 63S080, 63LS080 	| TBP18SA030 	| HM7602-5 	| AM27S18, AM27A18AC, AM27S08, AM27LS08 	| 74S188, DM8578 	|
+
+```
+ TTL/Bipolar PROM
+  32*8 = 256 bit  
+   +----\/----+  
+D0 |1       16| Vcc  
+D1 |2       15| /CE  
+D2 |3       14| A4  
+D3 |4       13| A3  
+D4 |5       12| A2  
+D5 |6       11| A1  
+D6 |7       10| A0  
+GND|8        9| D7  
+   +----------+  
+```
 
 ## How To Use
 - Wire up a 16-pin socket on a perf-board and connect the perf-board to the Arduino via pin headers.
@@ -7,8 +29,9 @@ Using an Arduino UNO, dump a AM27S19DC 256Bit (32x8) Bipolar PROM from AMD.
 - Copy the Serial Output into the `hex_data` triple quoted string variable in [Verify_HEX_Checksums.py](Verify_HEX_Checksums.py) to verify it was a clean read.
 
 # Tested
-Compiled and tested, not sure if it's actually dumping properly, I only have one chip atm.  
-The dump does verify correctly with the [Verify_HEX_Checksums.py](Verify_HEX_Checksums.py) program.
+Compiled and tested, not sure if it's actually dumping properly.  
+I tested two kinds of chips, both seem to have been dumped correctly.  
+The dumps checksums verify correctly with the [Verify_HEX_Checksums.py](Verify_HEX_Checksums.py) program.
 
 # Why? Don't ROM dumping tools exist already? 
 I need a dumper for some Textronix gear's PROMs and my Xgecu T56 doesn't support the AM27S19DC chip nor any of it's drop in replacements.  
