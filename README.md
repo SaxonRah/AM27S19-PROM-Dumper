@@ -122,3 +122,75 @@ If you know how to dump these chips with the Xgecu T56 raise an Issue please.
 :01001E0000E1 - Checksum Correct
 :01001F0000E0 - Checksum Correct
 ```
+
+### Tektronix 92SX118 (A25) 160-3851-01 PROM
+```
+:0100000002FD
+:0100010000FE
+:0100020004F9
+:0100030001FB
+:0100040007F4
+:010005004FAB
+:0100060000F9
+:0100070011E7
+:0100080053A4
+:0100090000F6
+:01000A0000F5
+:01000B0000F4
+:01000C0000F3
+:01000D0000F2
+:01000E0000F1
+:01000F0000F0
+:0100100000EF
+:0100110000EE
+:0100120000ED
+:0100130000EC
+:0100140000EB
+:0100150000EA
+:0100160000E9
+:0100170000E8
+:0100180000E7
+:0100190000E6
+:01001A0000E5
+:01001B0000E4
+:01001C0000E3
+:01001D0000E2
+:01001E0000E1
+:01001F0000E0
+```
+
+### Verify Tektronix 92SX118 (A25) 160-3851-01 PROM with [Verify_HEX_Checksums.py](Verify_HEX_Checksums.py)
+```
+:0100000002FD - Checksum Correct
+:0100010000FE - Checksum Correct
+:0100020004F9 - Checksum Correct
+:0100030001FB - Checksum Correct
+:0100040007F4 - Checksum Correct
+:010005004FAB - Checksum Correct
+:0100060000F9 - Checksum Correct
+:0100070011E7 - Checksum Correct
+:0100080053A4 - Checksum Correct
+:0100090000F6 - Checksum Correct
+:01000A0000F5 - Checksum Correct
+:01000B0000F4 - Checksum Correct
+:01000C0000F3 - Checksum Correct
+:01000D0000F2 - Checksum Correct
+:01000E0000F1 - Checksum Correct
+:01000F0000F0 - Checksum Correct
+:0100100000EF - Checksum Correct
+:0100110000EE - Checksum Correct
+:0100120000ED - Checksum Correct
+:0100130000EC - Checksum Correct
+:0100140000EB - Checksum Correct
+:0100150000EA - Checksum Correct
+:0100160000E9 - Checksum Correct
+:0100170000E8 - Checksum Correct
+:0100180000E7 - Checksum Correct
+:0100190000E6 - Checksum Correct
+:01001A0000E5 - Checksum Correct
+:01001B0000E4 - Checksum Correct
+:01001C0000E3 - Checksum Correct
+:01001D0000E2 - Checksum Correct
+:01001E0000E1 - Checksum Correct
+:01001F0000E0 - Checksum Correct
+```
