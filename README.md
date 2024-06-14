@@ -3,7 +3,7 @@ Using an Arduino UNO, dump a AM27S19DC 256Bit (32x8) Bipolar PROM from AMD.
 
 ## How To Use
 - Wire up a 16-pin socket on a perf-board and connect the perf-board to the Arduino via pin headers.
-- The [ROM_Dumper.ino](ROM_Dumper.ino) gets compiled and flashed on to the Arduino.  
+- The [PROM_Dumper.ino](PROM_Dumper.ino) gets compiled and flashed on to the Arduino.  
 - Copy the Serial Output into the `hex_data` triple quoted string variable in [Verify_HEX_Checksums.py](Verify_HEX_Checksums.py) to verify it was a clean read.
 
 # Tested
